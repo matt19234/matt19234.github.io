@@ -1,0 +1,70 @@
+@font-face {
+    font-family: lato;
+    src: url(lato_bold.ttf);
+}
+
+body {
+    max-width: 45em;
+    min-width: 20em;
+    margin: auto;
+    padding: 1em;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+
+h1, h2 {
+    font-family: lato;
+}
+
+p {
+    text-align: justify;
+}
+
+.image-container {
+    overflow: auto;
+}
+
+img {
+    max-width: 13em;
+    height: auto;
+    float: left;
+    margin-right: 1em;
+    border-radius: 5px;
+}
+
+a {
+    transition: all 300ms ease;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+/*h1 {
+    text-align: center;
+}*/
+
+h3 {
+    margin-bottom: 0;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+h3 + p, h4 + p {
+    margin-top: 0;
+}
+
+footer {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: lato;
+    text-align: center;
+}

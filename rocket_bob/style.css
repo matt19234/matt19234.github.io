@@ -1,0 +1,345 @@
+@charset 'UTF-8';
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@font-face {
+	src: url('fonts/futura.ttf');
+	font-family: futura;
+}
+
+@font-face {
+	src: url('fonts/dimitri.ttf');
+	font-family: dimitri;
+}
+
+@font-face {
+	src: url('fonts/orator.ttf');
+	font-family: orator;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+
+	font-weight: inherit;
+	font-family: inherit;
+	text-align: inherit;
+	font-size: inherit;
+	color: inherit;
+
+	background-color: transparent;
+
+	position: relative;
+}
+
+input, button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0;
+}
+
+button, input, a {
+	display: inline-block;
+
+	-webkit-transition: all .15s ease;
+	transition: all .15s ease;
+}
+
+input, button, textarea, iframe {
+	outline: none;
+	border: none;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+html {
+	height: 100%;
+
+	background-color: white;
+
+	font-weight: lighter;
+	font-family: monospace;
+}
+
+body {
+	flex-direction: column;
+	display: flex;
+	height: 100%;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#nav {
+	justify-content: center;
+	padding: 5px 0;
+	display: flex;
+	height: 60px;
+
+	color: white;
+
+	background-color: black;
+}
+
+#nav a {
+	margin: 0 20px;
+
+	text-decoration: none;
+	line-height: 50px;
+	font-size: 1.5rem;
+}
+
+#nav a.icon {
+	height: 50px;
+	width: 50px;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+
+#nav a:hover {
+	opacity: 0.5;
+}
+
+#nav a:active {
+	opacity: 0.25;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#container {
+	overflow: auto;
+	flex: 1;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+main {
+	left: 0; top: 0; right: 0; bottom: 0;
+	position: absolute;
+	overflow: hidden;
+
+	background-color: white;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@charset 'UTF-8';
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@font-face {
+	font-family: 'dimitri';
+	src: url('fonts/dimitri.ttf');
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+html {
+	background-color: black;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#nav {
+	background-color: white;
+
+	color: black;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.overlays {
+	position: absolute;
+	z-index: 1000;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.overlay {
+	position: absolute;
+	padding: 75px 0;
+	margin: auto;
+	height: 100%;
+	width: 100%;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+
+	-webkit-transition: all 2s ease;
+	transition: all .5s ease;
+	opacity: 0;
+}
+
+.normal {
+	width: 900px;
+
+	font-family: futura;
+	text-align: center;
+	color: white;
+}
+
+.normal h1 {
+	letter-spacing: 1.25rem;
+	word-spacing: 1.5rem;
+	font-size: 7rem;
+}
+
+.normal h2 {
+	font-size: 4rem;
+}
+
+.normal p {
+	font-size: 2rem;
+}
+
+.normal * + h1,
+.normal * + h2,
+.normal * + p,
+.normal * + .slider {
+	margin-top: 25px;
+}
+
+section {
+	padding: 50px;
+}
+
+.slider > * {
+	margin-top: 0;
+}
+
+.translucent {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.box {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.grid {
+	display: flex;
+	padding: 0;
+}
+
+.grid > * {
+	flex: 1;
+}
+
+.grid > * + * {
+	margin-left: 10px;
+}
+
+.explanation {
+	padding: 128px 0 0 0;
+
+	background-position: center 32px;
+	background-repeat: no-repeat;
+	background-size: 64px;
+}
+
+.explanation p {
+	font-size: 1.25rem;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#pause-icon {
+	margin: -50% 0 0 -50%;
+	position: absolute;
+	height: 128px;
+	width: 128px;
+	left: 50%;
+	top: 50%;
+
+	opacity: 0;
+
+	background-image: url('images/ui/pause.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+div.meters {
+	flex-direction: column;
+	position: absolute;
+	display: flex;
+	bottom: 0;
+	left: 0;
+
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+div.meter-container {
+	width: 300px;
+	margin: 5px;
+
+	flex: 1 40px;
+
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+div.meter {
+	height: 40px;
+	width: 0;
+
+	-webkit-transition: all .5s ease; transition: all .5s ease;
+}
+
+#health {
+	background-color: rgb(252, 60, 60);
+}
+
+#fuel {
+	background-color: rgb(255, 196, 50);
+
+	-webkit-transition: opacity .5s ease; transition: opacity .5s ease;
+}
+
+#power {
+	background-color: rgb(56, 216, 194);
+
+	-webkit-transition: opacity .5s ease; transition: opacity .5s ease;
+}
+
+div.scores {
+	position: absolute;
+	display: flex;
+	bottom: 0;
+	right: 0;
+}
+
+div.score {
+	height: 60px;
+	width: 150px;
+	flex: 1;
+
+	font-family: dimitri, calibri;
+	line-height: 60px;
+	font-size: 24px;
+
+	padding-left: 60px;
+
+	background-position: 10px 7px;
+	background-repeat: no-repeat;
+	background-size: 40px;
+}
+
+#high-score {
+	background-image: url('images/ui/high-score.png');
+
+	color: rgb(241, 196, 15);
+}
+
+#current-score {
+	background-image: url('images/ui/current-score.png');
+
+	color: white;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */

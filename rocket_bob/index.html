@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Rocket Bob</title>
+
+    <meta charset='UTF-8' />
+    <meta name='author' content='Matthew T. Regehr' />
+    <meta name='description' content='' />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id='container'>
+      <main id='game-space'>
+		    <canvas id='canvas'></canvas>
+
+				<div class='overlays'>
+					<div class='normal overlay' id='start'>
+						<section class='box'>
+							<h1>Rocket Bob</h1>
+
+							<div class='slider' id='start-intro'>
+								<p>
+									You've always wanted to be an astronaut.
+								</p>
+								<p>
+									As a monkey, it's been difficult - to say the least.
+								</p>
+								<p>
+									But when you showed off your piloting skills to NASA...
+								</p>
+								<p>
+									They had to let you try, at least once.
+								</p>
+								<p>
+									This is your one shot, do not miss your chance to blow!
+								</p>
+							</div>
+						</section>
+						<section class='grid'>
+							<div class='explanation' style='background-image: url("images/start/banana.png");'>
+								<p>
+									Bananas are your fuel. Catch as many as you can.
+								</p>
+							</div>
+							<div class='explanation' style='background-image: url("images/start/asteroid.png");'>
+								<p>
+									Asteroids are not your friends. NASA says to steer around them.
+								</p>
+							</div>
+							<div class='explanation' style='background-image: url("images/start/heart.png");'>
+								<p>
+									Hearts are your friends. They magically fix the shuttle, because science.
+								</p>
+							</div>
+							<div class='explanation' style='background-image: url("images/start/nyan.png");'>
+								<p>
+									Why are these even in space? I dunno, but I bet they do something cool.
+								</p>
+							</div>
+						</section>
+						<section class='translucent'>
+							<p>
+								Press space to begin.
+							</p>
+						</section>
+					</div>
+					<div class='normal overlay' id='count-down'>
+						<section class='box'>
+							<h1>Count Down</h1>
+
+							<div class='slider' id='count-down-intro'>
+								<p>
+									It's been your dream forever - to go to the moon.
+								</p>
+								<p>
+									Now it's for real!
+								</p>
+								<p>
+									If you don't collect enough banana fuel...
+								</p>
+								<p>
+									If you run into asteroids...
+								</p>
+								<p>
+									You will die.
+								</p>
+							</div>
+						</section>
+						<section class='translucent'>
+							<p id='count-down-number'></p>
+
+							<p>
+								Press space to skip.
+							</p>
+						</section>
+					</div>
+					<div class='overlay' id='ui'>
+						<div id='pause-icon'></div>
+
+						<div class='meters'>
+							<div class='meter-container'>
+								<div class='meter' id='fuel'></div>
+							</div>
+							<div class='meter-container'>
+								<div class='meter' id='health'></div>
+							</div>
+							<div class='meter-container'>
+								<div class='meter' id='power'></div>
+							</div>
+						</div>
+						<div class='scores'>
+							<div class='score' id='high-score'></div>
+							<div class='score' id='current-score'></div>
+						</div>
+					</div>
+					<div class='normal overlay' id='game-over'>
+						<section class='box'>
+							<h1>Game Over</h1>
+
+							<p id='game-over-reason'>
+								
+							</p>
+						</section>
+						<section class='translucent'>
+							<p>
+								Press space to restart.
+							</p>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    <script src="js/jquery.js"></script>
+		<script src="js/size.js"></script>
+		<script src="js/blu.js"></script>
+
+		<script src="js/game.js"></script>
+  </body>
+</html>

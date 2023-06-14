@@ -1,0 +1,251 @@
+@charset 'UTF-8';
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@font-face {
+	src: url('fonts/futura.ttf');
+	font-family: futura;
+}
+
+@font-face {
+	src: url('fonts/dimitri.ttf');
+	font-family: dimitri;
+}
+
+@font-face {
+	src: url('fonts/orator.ttf');
+	font-family: orator;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+
+	font-weight: inherit;
+	font-family: inherit;
+	text-align: inherit;
+	font-size: inherit;
+	color: inherit;
+
+	background-color: transparent;
+
+	position: relative;
+}
+
+input, button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0;
+}
+
+button, input, a {
+	display: inline-block;
+
+	-webkit-transition: all .15s ease;
+	transition: all .15s ease;
+}
+
+input, button, textarea, iframe {
+	outline: none;
+	border: none;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+html {
+	height: 100%;
+
+	background-color: white;
+
+	font-weight: lighter;
+	font-family: monospace;
+}
+
+body {
+	flex-direction: column;
+	display: flex;
+	height: 100%;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#nav {
+	justify-content: center;
+	padding: 5px 0;
+	display: flex;
+	height: 60px;
+
+	color: white;
+
+	background-color: black;
+}
+
+#nav a {
+	margin: 0 20px;
+
+	text-decoration: none;
+	line-height: 50px;
+	font-size: 1.5rem;
+}
+
+#nav a.icon {
+	height: 50px;
+	width: 50px;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+
+#nav a:hover {
+	opacity: 0.5;
+}
+
+#nav a:active {
+	opacity: 0.25;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#container {
+	overflow: auto;
+	flex: 1;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+main {
+	left: 0; top: 0; right: 0; bottom: 0;
+	position: absolute;
+	overflow: hidden;
+
+	background-color: white;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@charset "UTF-8";
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+@font-face {
+    font-family: "dimitri";
+    src: url("/static/fonts/dimitri.ttf");
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+html {
+    background-color: white;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.layer {
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    pointer-events: none;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.container {
+    height: 100%;
+    margin: auto;
+    width: 602px;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.ui {
+    height: 100%;
+    width: 100%;
+}
+
+.score {
+    position: absolute;
+    height: 64px;
+    width: 64px;
+
+    font-family: monospace;
+    text-align: center;
+    line-height: 64px;
+    font-size: 30px;
+    color: white;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.ui .score.red {
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ui .score.blue {
+    bottom: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.game-over {
+    height: 100%;
+    width: 100%;
+
+    background-color: rgb(30, 30, 30);
+
+    pointer-events: auto;
+}
+
+.game-over .container {
+    padding: 40px 0;
+
+    text-align: center;
+    color: white;
+}
+
+.game-over .container * > * {
+    margin-top: 25px;
+}
+
+.game-over .container h1 {
+    font-size: 3rem;
+}
+
+.game-over .container p {
+    font-size: 1.75rem;
+}
+
+.game-over .container .restart {
+    padding: 10px 20px;
+
+    background-color: white;
+
+    font-size: 1.75rem;
+    color: black;
+
+    transition: opacity 0.15s ease;
+}
+
+.game-over .container .restart:hover {
+    opacity: 0.75;
+}
+
+.game-over .container .restart:active {
+    opacity: 0.5;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */

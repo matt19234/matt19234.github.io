@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ghost Game</title>
+
+    <meta charset='UTF-8' />
+    <meta name='author' content='Matthew T. Regehr' />
+    <meta name='description' content='' />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- <link rel='icon' href='{% static "images/icon.png" %}' /> -->
+  </head>
+  <body>
+    <!-- <nav id='nav'>
+      <a href='{% url "main:about" %}'>About Matt</a>
+      <a href='{% url "main:home" %}' class='icon' style='background-image: url({% static "images/icon.png" %});'></a>
+      <a href='{% url "main:feedback" %}'>Feedback</a>
+    </nav> -->
+    <div id='container'>
+      <main id='game-space'>
+        <div class='layer'>
+          <canvas id='canvas'></canvas>
+        </div>
+        <div class='layer' id='ui'></div>
+      </main>
+    </div>
+
+    <script src="js/blu.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
