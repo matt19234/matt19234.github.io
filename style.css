@@ -32,6 +32,15 @@ img {
     border-radius: 5px;
 }
 
+@media only screen and (max-width: 600px) {
+  img {
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 a {
     transition: all 300ms ease;
 }
@@ -39,10 +48,6 @@ a {
 a:hover {
     opacity: 0.5;
 }
-
-/*h1 {
-    text-align: center;
-}*/
 
 h3 {
     margin-bottom: 0;
