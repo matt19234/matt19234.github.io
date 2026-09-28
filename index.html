@@ -16,6 +16,8 @@
     <script data-goatcounter="https://matt19234-codeberg.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
+    <header id="msg-banner"></header>
+
     <main>
       <div class="image-container">
         <h1>Matthew Regehr</h1>
@@ -129,5 +131,13 @@
     <footer>
       Thanks for visiting &#128516;
     </footer>
+
+    <script>
+      try {
+        if (localStorage.getItem("skipgc") === "t") {
+          document.getElementById("msg-banner").innerHTML = "<p class='msg'>Goat counter disabled!</p>";
+        }
+      } catch (e) {}
+    </script>
   </body>
 </html>

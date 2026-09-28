@@ -10,6 +10,13 @@ body {
     padding: 1em;
     font-size: 1.2em;
     line-height: 1.4em;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 35px;
 }
 
 h1, h2 {
@@ -18,6 +25,20 @@ h1, h2 {
 
 p {
     text-align: justify;
+}
+
+p.msg {
+    background-color: rgb(240, 180, 180);
+    border-radius: 5px;
+    font-family: lato;
+    line-height: 0.6em;
+    font-size: 0.6em;
+    color: white;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+
+    width: fit-content;
+    margin-left: auto;
+    padding: 8px;
 }
 
 .image-container {
