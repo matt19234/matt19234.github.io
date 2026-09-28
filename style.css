@@ -22,13 +22,13 @@ p {
 }
 
 p.msg {
-    background-color: rgb(240, 180, 180);
+    background-color: rgb(255, 90, 90);
     border-radius: 5px;
     font-family: lato;
     line-height: 0.6em;
     font-size: 0.6em;
     color: white;
-    border: solid 1px rgba(0, 0, 0, 0.1);
+    border: solid 1px rgba(0, 0, 0, 0.2);
 
     width: fit-content;
     margin: 0 0 0 auto;
