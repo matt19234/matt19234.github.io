@@ -13,8 +13,7 @@
 
     <link rel="icon" type="image/jpeg" href="/headshot_2025.jpeg" />
 
-    <script data-goatcounter="https://matt19234-github.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script id="goatcounter-script" data-goatcounter="https://matt19234-github.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
     <header id="msg-banner"></header>
@@ -134,11 +133,27 @@
     </footer>
 
     <script>
-      try {
-        if (localStorage.getItem("skipgc") === "t") {
-          document.getElementById("msg-banner").innerHTML = "<p class='msg'>Goat counter disabled!</p>";
+      function renderStatusBanner() {
+        try {
+          if (localStorage.getItem('skipgc') === 't') {
+            document.getElementById('msg-banner').innerHTML = '<p class="msg">Goat Counter disabled!</p>';
+          }
+        } catch (e) {}
+      }
+
+      const gcScript = document.getElementById('goatcounter-script');
+
+      if (gcScript) {
+        // If count.js has already executed (e.g., loaded from cache)
+        if (window.goatcounter) {
+          renderStatusBanner();
+        } else {
+          // Wait for count.js to finish fetching and executing
+          gcScript.addEventListener('load', renderStatusBanner);
         }
-      } catch (e) {}
+      } else {
+        renderStatusBanner();
+      }
     </script>
   </body>
 </html>
